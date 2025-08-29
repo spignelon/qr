@@ -30,21 +30,21 @@ export const FeatureCards: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
       {features.map((feature, index) => {
         const Icon = feature.icon;
         return (
           <div
             key={index}
-            className="group bg-white/80 backdrop-blur rounded-xl p-4 border border-gray-200 hover:bg-white hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="group bg-white/80 backdrop-blur rounded-xl p-3 sm:p-4 border border-gray-200 hover:bg-white hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
-            <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${feature.gradient} mb-3 group-hover:scale-110 transition-transform duration-300`}>
+            <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${feature.gradient} mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300`}>
               <Icon className="w-4 h-4 text-white" />
             </div>
             <h3 className="font-semibold text-gray-800 text-sm mb-1">
               {feature.title}
             </h3>
-            <p className="text-xs text-gray-600">
+            <p className="text-xs text-gray-600 leading-relaxed">
               {feature.description}
             </p>
           </div>

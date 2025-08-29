@@ -59,12 +59,12 @@ function App() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2220%22 height=%2220%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cdefs%3E%3Cpattern id=%22grid%22 width=%2220%22 height=%2220%22 patternUnits=%22userSpaceOnUse%22%3E%3Cpath d=%22M 20 0 L 0 0 0 20%22 fill=%22none%22 stroke=%22%23f3f4f6%22 stroke-width=%221%22/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22url(%23grid)%22 /%3E%3C/svg%3E')] opacity-30"></div>
       
       <div className="relative z-10">
-        <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12">
           <Header />
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
-              <div>
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+              <div className="order-1">
                 <TextInput
                   text={text}
                   onChange={setText}
@@ -74,7 +74,7 @@ function App() {
                 <FeatureCards />
               </div>
               
-              <div className="lg:sticky lg:top-8">
+              <div className="order-2 lg:sticky lg:top-8">
                 {renderQRSection()}
               </div>
             </div>

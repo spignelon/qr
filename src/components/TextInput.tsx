@@ -12,12 +12,12 @@ export const TextInput: React.FC<TextInputProps> = ({ text, onChange, placeholde
   const maxCharacters = 2000;
   
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 mb-8">
+    <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 border border-gray-100 mb-6 sm:mb-8">
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-purple-100 rounded-lg">
           <Type className="w-5 h-5 text-purple-600" />
         </div>
-        <h2 className="text-xl font-semibold text-gray-800">Enter Your Text</h2>
+        <h2 className="text-lg sm:text-xl font-semibold text-gray-800">Enter Your Text</h2>
       </div>
       
       <div className="relative">
@@ -25,15 +25,15 @@ export const TextInput: React.FC<TextInputProps> = ({ text, onChange, placeholde
           value={text}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full h-32 p-4 border-2 border-gray-200 rounded-xl resize-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all duration-200 text-gray-700 placeholder-gray-400"
+          className="w-full h-28 sm:h-32 p-3 sm:p-4 border-2 border-gray-200 rounded-xl resize-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all duration-200 text-gray-700 placeholder-gray-400 text-sm sm:text-base"
           maxLength={maxCharacters}
         />
         
-        <div className="flex justify-between items-center mt-3">
-          <div className="text-sm text-gray-500">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3 gap-2 sm:gap-0">
+          <div className="text-xs sm:text-sm text-gray-500">
             Start typing to generate your QR code instantly
           </div>
-          <div className={`text-sm font-medium ${
+          <div className={`text-xs sm:text-sm font-medium ${
             characterCount > maxCharacters * 0.9 
               ? 'text-red-500' 
               : characterCount > maxCharacters * 0.7 
