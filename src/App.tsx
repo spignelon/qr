@@ -71,10 +71,18 @@ function App() {
                   placeholder="Enter your text, URL, or any content to generate a QR code..."
                 />
                 
-                <FeatureCards />
+                {/* QR Section - shows after input on mobile, in right column on desktop */}
+                <div className="lg:hidden mt-6">
+                  {renderQRSection()}
+                </div>
+                
+                <div className="mt-6 lg:mt-8">
+                  <FeatureCards />
+                </div>
               </div>
               
-              <div className="order-2 lg:sticky lg:top-8">
+              {/* QR Section - hidden on mobile, shows in right column on desktop */}
+              <div className="hidden lg:block order-2 lg:sticky lg:top-8">
                 {renderQRSection()}
               </div>
             </div>
