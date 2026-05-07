@@ -7,25 +7,25 @@ export const FeatureCards: React.FC = () => {
       icon: Zap,
       title: 'Instant Generation',
       description: 'QR codes appear as you type',
-      gradient: 'from-yellow-400 to-orange-500'
+      iconClass: 'bg-amber-100 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400'
     },
     {
       icon: Shield,
       title: 'Privacy First',
       description: 'Everything happens locally',
-      gradient: 'from-green-400 to-emerald-500'
+      iconClass: 'bg-emerald-100 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400'
     },
     {
       icon: Smartphone,
       title: 'Mobile Ready',
       description: 'Perfect on any device',
-      gradient: 'from-blue-400 to-purple-500'
+      iconClass: 'bg-sky-100 dark:bg-sky-900/20 text-sky-600 dark:text-sky-400'
     },
     {
       icon: Download,
       title: 'Easy Export',
       description: 'Download or copy instantly',
-      gradient: 'from-pink-400 to-red-500'
+      iconClass: 'bg-rose-100 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400'
     }
   ];
 
@@ -36,15 +36,15 @@ export const FeatureCards: React.FC = () => {
         return (
           <div
             key={index}
-            className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-xl p-3 sm:p-4 border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="bg-white dark:bg-zinc-900 rounded-xl p-3 sm:p-4 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-200"
           >
-            <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${feature.gradient} mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300`}>
-              <Icon className="w-4 h-4 text-white" />
+            <div className={`inline-flex p-2 rounded-lg ${feature.iconClass} mb-2 sm:mb-3`}>
+              <Icon className="w-4 h-4" />
             </div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm mb-1">
+            <h3 className="font-semibold text-zinc-800 dark:text-zinc-100 text-sm mb-1">
               {feature.title}
             </h3>
-            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
               {feature.description}
             </p>
           </div>
