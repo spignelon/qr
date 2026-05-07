@@ -36,15 +36,15 @@ export const FeatureCards: React.FC = () => {
         return (
           <div
             key={index}
-            className="group bg-white/80 backdrop-blur rounded-xl p-3 sm:p-4 border border-gray-200 hover:bg-white hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-xl p-3 sm:p-4 border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${feature.gradient} mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300`}>
               <Icon className="w-4 h-4 text-white" />
             </div>
-            <h3 className="font-semibold text-gray-800 text-sm mb-1">
+            <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm mb-1">
               {feature.title}
             </h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
               {feature.description}
             </p>
           </div>
